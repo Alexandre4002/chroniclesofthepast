@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicles of the past</title>
+    <link rel="stylesheet" type="text/css" href="css/rules.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/icon" href="css/img/chroniclesofthepastlogo.png">
+    <meta name="author" content="Alexandre Castello">
+    
+
+</head> 
+<body onload="onload1(), onload2()">
+  <nav class="menu1">
+        <div class="expandir-menu">
+            <i class="bi bi-list" id="hamburguer" onclick="hamb()"></i>
+        </div>
+        <ul>
+            <li class="pag ">
+                <a href="index.html" id="link">
+                    <span class="icon"><i class="bi bi-house-door"></i></span>
+                    <span class="linktexto">HOME</span>
+                </a>
+            </li>
+           
+            <li class="pag ">
+                <a href="diagram.html" id="link">
+                    <span class="icon"><i class="bi bi-diagram-3"></i></span>
+                    <span class="linktexto">DIAGRAM</span>
+                </a>
+            </li>
+            <li class="pag ativo">
+                <a href="rules.html">
+                    <span class="icon"><i class="bi bi-file-earmark-ruled"></i></span>
+                    <span class="linktexto">RULE</span>
+                </a>
+            </li>
+            <li class="pag">
+                <a href="collection.html">
+                    <span class="icon"><i class="bi bi-collection"></i></span>
+                    <span class="linktexto">COLLECTION</span>
+                </a>
+            </li>
+            <div class="trilho" id="trilho" onclick="darkmode()">
+                <div class="indicador">
+                   
+                </div>
+            </div>
+        </ul>
+               
+  </nav>
+
+         <h1 class="textrule">Aqui você irá encontrar mais informações e regras sobre o <br>jogo do momento Chronicles of the past!</h1>
+            <div class="p-rule">
+                <p class="texto-rule">Metodologia:<br>
+                    A divisão dos personagens foi feia a partir de eras; idade antiga, idade média, idade moderna e idade contemporânea, com um total de 100 cartas, 85 são figuras    históricas e 15 cartas de suporte. O modelo das cartas é inspirado em molduras, com cada era tendo uma cor de fundo diferente.
+                 Regras:
+                 <br>
+                    Cada Jogador tem seu próprio arsenal de cartas, obtido através de compra, e pontos de vida totalizando 30000.<br> Em jogo, são posicionadas 5 cartas escolhidas pelo jogador, com três modos disponíveis:<br><Br> Ataque e Defesa
+                 Quando a carta está verticalmente posicionada, está no modo Ataque, que é baseada no Stats de ATK. No modo de Ataque, o objetivo da carta é combater o jogador, retirando seus pontos de vida.
+                 Quando a carta está horizontalmente posicionada, está no modo de Defesa, que é baseada no Stats de DEF. Quando estiver no modo defesa, obrigatoriamente ela será atacada, perdendo pontos de defesa e quando chegar a zero, ela é derrotada e vai para outro bolo de baralho chamado “Cemitério”.<br>
+                 Cartas Suporte:
+                 As cartas suportes afetam o jogo de formas distintas, dando efeitos BUFFS ou NERFS as cartas base. <br>Sendo:
+                  Paradoxo (Congela os oponentes durante uma rodada, exceto filósofos)
+                 Guilhotina (Dá dano em nobres)
+                 Peste Negra (Dá dano em Europeus)
+                 Colonização (Dá dano em quem não for europeu)
+                 Machismo (Personagens femininas não podem ser usadas por 2 rodadas)
+                    Vacinas (Recupera 5000 pontos de vida)
+                Perseguição (Personagens da idade média ficam congelados por 2 rodados)
+                Inquisição (Buffa personagem da idade Média)
+                Renascimento (Buffa personagens da idade moderna)
+                Escrita (Buffa personagens da idade antiga)
+                Revolução Industrial (Buffa personagens da idade contemporânea)
+                Grandes Guerras (Nerfa personagens da idade contemporânea)
+                Igreja católica (Nerfa personagens da idade média, exceto personagens da igreja)
+                Revolução francesa (Nerfa personagens da idade moderna)
+                Bárbaros (Nerfa personagens da idade antiga, exceto barbaros)
+                
+                </p>
+
+            <div class="imgtextorule">
+                <img class="adriano" src="css/img/adriano.png">
+                <img class="luis" src="css/img/luisxvi.png">
+                <p class="texto-rule1">Modo de ataque</p>
+                <p class="texto-rule2">Modo de defesa</p>
+            </div>
+        </div>
+       
+
+  <script src="js/inicio1.js"></script>
+  <script src="js/inicio2.js"></script>
+
+</body>
+</html>
