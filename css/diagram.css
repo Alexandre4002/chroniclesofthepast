@@ -1,0 +1,321 @@
+@font-face {
+    font-family: font1;
+    src: url(fontes/font1.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: font1
+}
+
+body
+{
+    height: 180vh;
+    background: #ffecd1;
+    transition: .5s;
+}
+nav.menu1
+{
+    width: 80px;
+    height: 100%;
+    background-color: black;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #b48d44;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+nav.menu1.expandir
+{
+width: 300px;
+}
+.img1.expandir
+{
+    width: 300px;
+}
+.expandir-menu
+{
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 60px;
+}
+.expandir-menu > i{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+ul li.pag
+{
+    transition: .5s;
+    position: relative;
+}
+ul li.ativo
+{
+    background-color: #b48d44;
+}
+ul li.pag:hover
+{
+    
+    opacity: 1;
+    transform: scale(1.1);
+}
+ul li.pag::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b48d44;
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+ul li.pag:hover::before
+{
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform .4s;
+}
+ul li.pag a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+   line-height: 40px;
+}
+ul li.pag a .linktexto
+{
+    margin-left: 40px;
+    font-family: font1;
+    transition: .5s;
+    opacity: 0;
+}
+
+nav.menu1.expandir .linktexto
+{
+    margin-left: 4  0px;
+    opacity: 1;
+}
+
+ul li.pag a .icon > i 
+{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.img1
+{
+    width: 60px;
+    margin-left: -5px;
+}
+.trilho
+{
+    width: 60px;
+    height: 35px;
+    background-color:#b48d44;
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador
+{
+    width: 30px;
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+}
+.trilho.dark
+{
+    background-color:#d4d4d4 ;
+}
+.trilho.dark .indicador
+{
+    left: 30px;
+    background-color: black;
+}
+body.dark
+{
+    background-color: #362c25;
+    transition: .5s;
+}
+body.dark ul li.ativo
+{
+    background-color:#1a1512;
+}
+body.dark ul li.pag:hover
+{
+    background-color: #1a1512;
+}
+body.dark ul nav.menu1
+{
+   background-color: #1a1512;
+}
+body.dark ul li.pag::before
+{
+    background-color: #1a1512;
+}
+.joana
+{
+    width: 55vh;
+    position: absolute;
+   
+    margin-top: 100vh;
+    z-index: -1;
+}
+
+
+.seta1
+{
+    width: 15vh;
+    margin-left: 40vh;
+    margin-top: 147vh;
+    animation-name: setaanimation;
+    animation-duration: .9s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: 2;
+}
+.seta2
+{
+    display: flex;
+    width: 15vh;
+    transform:rotate(90deg);
+    margin-top: -15.8vh;
+    z-index: 2;
+}
+
+.textatk
+{
+    
+      margin-left: 150px;
+     margin-top: -150px;
+     word-break: normal;
+    font-size: 1.1rem;
+    font-family: font1;
+}
+.textdef
+{
+    margin-left: 900px;
+    margin-top: -120px;
+    font-size: 1.1rem;
+    font-family: font1;
+    word-break: normal;
+}
+.textnum
+{
+    margin-left: 900px;
+    margin-top: -300px;
+    font-size: 1.1rem;
+    font-family: font1;
+    word-break: normal;
+}
+body.dark .textatk
+{
+    color: #b48d44;
+}
+body.dark .textdef
+{
+    color: #b48d44;
+}
+body.dark .textnum
+{
+    color: #b48d44;
+}
+.container
+{
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   margin-left: 10vh;
+   margin-top: -80vh;
+}
+.titulo
+{
+    text-align: center;
+    margin-top: 30px;
+    font-family: font1;
+}
+body.dark .titulo
+{
+    color: #b48d44;
+}
+.textgame
+{
+    text-align: center;
+    font-family: font1;
+    font-size: 1.2rem;
+    font-weight: 1000;
+}
+body.dark .textgame
+{
+    color: #b48d44;
+}
+.textgame1
+{
+    background-color: #e4d1b8;
+    border: solid 3px;
+    margin: 50px 20px 50px 100px;
+}
+body.dark .textgame1
+{
+    background-color: #1f1915;
+}
+.cronicas
+{
+    width: 70vh;
+    margin-left: 80vh;
+}
+.navbarfinal
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.589);
+    margin-top: 60vh;   
+   height: 6.5vh;
+    cursor:initial;
+}
+.linknavbar
+{
+    font-family: font1;
+    font-weight: 1000;
+    padding: 5px;
+
+}
+body.dark .navbarfinal
+{
+    background-color: #b48d44;
+}
+.texttitulodi
+{
+    margin: 20px 100px 100px 100px;
+    font-family: font1;
+    font-weight: 1000;
+    text-align: center;
+
+}
+body.dark .texttitulodi
+{
+    color: #b48d44;
+}
+.diagrama
+{
+    margin: 40px 200px 200px 200px;
+}

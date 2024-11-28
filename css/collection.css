@@ -1,0 +1,468 @@
+@font-face 
+{
+    font-family: font1;
+    src: url(fontes/font1.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+body
+{
+    height: 180vh;
+    background: #ffecd1;
+    transition: .5s;
+}
+nav.menu1
+{
+    width: 80px;
+    height: 100%;
+    background-color: black;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #b48d44;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+nav.menu1.expandir
+{
+    width: 300px;
+}
+.img1.expandir
+{
+    width: 300px;
+}
+.expandir-menu
+{
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 60px;
+}
+.expandir-menu > i
+{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+ul
+{
+    height: 100%;
+    list-style-type: none;
+}
+ul li.pag
+{
+    transition: .5s;
+    position: relative;
+}
+ul li.ativo
+{
+    background-color: #b48d44;
+}
+ul li.pag:hover
+{
+    
+    opacity: 1;
+    transform: scale(1.1);
+}
+ul li.pag::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #b48d44;
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+ul li.pag:hover::before
+{
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform .4s;
+}
+ul li.pag a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+   line-height: 40px;
+}
+ul li.pag a .linktexto
+{
+    margin-left: 40px;
+    font-family: font1;
+    transition: .5s;
+    opacity: 0;
+}
+nav.menu1.expandir .linktexto
+{
+    margin-left: 4  0px;
+    opacity: 1;
+}
+ul li.pag a .icon > i 
+{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.img1
+{
+    width: 60px;
+    margin-left: -5px;
+}
+.trilho
+{
+    width: 60px;
+    height: 35px;
+    background-color:#b48d44;
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+}
+.trilho .indicador
+{
+    width: 30px;
+    height: 35px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+}
+.trilho.dark
+{
+    background-color:#d4d4d4 ;
+}
+.trilho.dark .indicador
+{
+    left: 30px;
+    background-color: black;
+}
+body.dark
+{
+    background-color: #362c25;
+    transition: .5s;
+}
+body.dark ul li.ativo
+{
+    background-color:#1a1512;
+}
+body.dark ul li.pag:hover
+{
+    background-color: #1a1512;
+}
+body.dark ul nav.menu1
+{
+   background-color: #1a1512;
+}
+body.dark ul li.pag::before
+{
+    background-color: #1a1512;
+}
+.seta1
+{
+    width: 15vh;
+    margin-left: 40vh;
+    margin-top: 147vh;
+    animation-name: setaanimation;
+    animation-duration: .9s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: 2;
+}
+.seta2
+{
+    display: flex;
+    width: 15vh;
+    transform:rotate(90deg);
+    margin-top: -15.8vh;
+    z-index: 2;
+}
+.textatk
+{    
+    margin-left: 150px;
+    margin-top: -150px;
+    word-break: normal;
+    font-size: 1.1rem;
+    font-family: font1;
+}
+.textdef
+{
+    margin-left: 900px;
+    margin-top: -120px;
+    font-size: 1.1rem;
+    font-family: font1;
+    word-break: normal;
+}
+.textnum
+{
+    margin-left: 900px;
+    margin-top: -300px;
+    font-size: 1.1rem;
+    font-family: font1;
+    word-break: normal;
+}
+body.dark .textatk
+{
+    color: #b48d44;
+}
+body.dark .textdef
+{
+    color: #b48d44;
+}
+body.dark .textnum
+{
+    color: #b48d44;
+}
+.container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 10vh;
+    margin-top: -80vh;
+}
+.titulo
+{
+    text-align: center;
+    margin-top: 30px;
+    font-family: font1;
+}
+body.dark .titulo
+{
+    color: #b48d44;
+}
+.textgame
+{
+    text-align: center;
+    font-family: font1;
+    font-size: 1.2rem;
+    font-weight: 1000;
+}
+body.dark .textgame
+{
+    color: #b48d44;
+}
+.textgame1
+{
+    background-color: #e4d1b8;
+    border: solid 3px;
+    margin: 50px 20px 50px 100px;
+}
+body.dark .textgame1
+{
+    background-color: #1f1915;
+}
+.cronicas
+{
+    width: 70vh;
+    margin-left: 80vh;
+}
+.navbarfinal
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.589);
+    margin-top: 60vh;   
+    height: 6.5vh;
+    cursor:initial;
+}
+.linknavbar
+{
+    font-family: font1;
+    font-weight: 1000;
+    padding: 5px;
+}
+body.dark .navbarfinal
+{
+    background-color: #b48d44;
+}
+main
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+::-webkit-scrollbar
+{
+    height: 10px;
+}
+.id-ant
+{
+    display: flex;
+    gap: 20px;
+    background-color: #ffffff;
+    border: 6px solid #e0c653;
+    margin: 0 0 20px 20px;
+    width: 900px;
+    padding: 20px;
+    overflow-x: scroll;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    outline: 3px solid #1f1915;
+    transition: 0.5s;
+}
+body.dark .id-ant
+{
+    background-color: #1a1512;
+}
+.cart1
+{
+    width: 200px;
+    height: 225px;
+    display: inline-flex;
+}
+.img
+{
+    height: 225px;
+    width: 200px;
+    margin-right: 20px;
+}
+.v, .vum, .vdois, .vtres, .vquatro, .vcinco, .vseis, .vsete, .voito, .vnove, .t, .tum, .tdois, .ttres, .tquatro, .tcinco, .tseis, .tsete, .toito, .tnove
+{
+    width: 200px;
+    height: 225px;
+    border-radius: 7px;
+    margin: 0px;
+}
+.id-med
+{
+    display: flex;
+    gap: 20px;
+    background-color: #ffffff;
+    border: 6px solid #a52323;
+    margin: 0 0 20px 20px;
+    width: 900px;
+    padding: 20px;
+    overflow-x: scroll;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    outline: 3px solid #1f1915;
+    transition: 0.5s;
+}
+body.dark .id-med
+{
+    background-color: #1a1512;
+}
+.cart2
+{
+    width: 200px;
+    height: 225px;
+    display: inline-flex;
+}
+.d, .d1, .d2, .d3, .d4, .d5, .d6, .d7, .d8, .d9, .d1, .dd1, .dd2, .dd3, .dd4, .dd5, .dd6, .dd7, .dd8, .dd9
+{
+    width: 200px;
+    height: 225px;
+    border-radius: 7px;
+    margin: 0px;
+}
+.id-mod
+{
+    display: flex;
+    gap: 20px;
+    background-color: #ffffff;
+    border: 6px solid #9632a3;
+    margin: 0 0 20px 20px;
+    width: 900px;
+    padding: 20px;
+    overflow-x: scroll;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    outline: 3px solid #1f1915;
+    transition: 0.5s;
+}
+body.dark .id-mod
+{
+    background-color: #1a1512;
+}
+.cart3
+{
+    width: 200px;
+    height: 225px;
+    display: inline-flex;
+}
+.q, .q1, .q2, .q3, .q4, .q5, .q6, .q7, .q8, .q9, .c, .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .s
+{
+    width: 200px;
+    height: 225px;
+    border-radius: 7px;
+    margin: 0px;
+}
+.id-com
+{
+    display: flex;
+    gap: 20px;
+    background-color: #ffffff;
+    border: 6px solid #386db3;
+    margin: 0 0 20px 20px;
+    width: 900px;
+    padding: 20px;
+    overflow-x: scroll;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    outline: 3px solid #1f1915;
+    transition: 0.5s;
+}
+body.dark .id-com
+{
+    background-color: #1a1512;
+}
+.cart4
+{
+    width: 200px;
+    height: 225px;
+    display: inline-flex;
+}
+.s1, .s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .ss, .ss1, .ss2, .ss3, .ss4, .ss5, .ss6, .ss7, .ss8, .ss9, .o, .o1, .o2, .o3, .o4, .o5
+{
+    width: 200px;
+    height: 225px;
+    border-radius: 7px;
+    margin: 0px;
+}
+.spc
+{
+    display: flex;
+    gap: 20px;
+    background-color: #ffffff;
+    border: 6px solid #37a133;
+    margin: 0 0 20px 20px;
+    width: 900px;
+    padding: 20px;
+    overflow-x: scroll;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    outline: 3px solid #1f1915;
+    transition: 0.5s;
+}
+body.dark .spc
+{
+    background-color: #1a1512;
+}
+.cart5
+{
+    width: 200px;
+    height: 225px;
+    display: inline-flex;
+}
+.e, .e1, .e2, .e3, .e4, .e5, .e6, .e7, .e7, .e8, .e9, .e10, .e11, .e12, .e13, .e14
+{
+    width: 200px;
+    height: 225px;
+    border-radius: 7px;
+    margin: 0px;
+}
